@@ -1,0 +1,51 @@
+using System;
+using System.IO;
+using System.Collections;
+
+namespace LectordeCSV
+{
+	class Program{
+		
+	
+	class Lector
+	{
+		 
+ 
+		}
+  static void Main(string[] args)
+			
+		{
+			Console.WriteLine("Dame direccion del path");
+			
+      String path;
+      path=Console.ReadLine();
+      Console.WriteLine(path);
+      
+      		StreamReader obj = new StreamReader("c:\\ejemplo11.csv");	
+      		if (Equals ( "c:\\ejemplo.csv",path ))
+      		{
+			string sLine="";
+			ArrayList arrText = new ArrayList();
+
+			while (sLine != null)
+			{
+				sLine = obj.ReadLine();
+				if (sLine != null)
+					arrText.Add(sLine);
+				
+       			 Console.WriteLine("{0}\"", sLine.Replace(",", "\n"));
+			}
+                        obj.Close();
+
+			foreach (string sOutput in arrText)
+			
+				Console.WriteLine(sOutput);
+		
+      		}
+      		else {
+				Console.WriteLine("No existe el archivo");
+			}
+		}
+	}
+}
+
